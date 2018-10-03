@@ -1,0 +1,126 @@
+/* générale*/
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #101214;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-variant: small-caps;
+}
+h1{
+    font-size: 2em;
+    margin:5px;
+    font-variant: small-caps;
+}
+p{
+    font-size:1.1em;
+}
+.border{
+    border: 3px dashed whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 3%;
+    padding: 7%;
+    width: 100%;
+}
+.pad{
+    padding-top: 4%;
+    }
+/*  NAV BAR */
+.style {
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out; 
+    color: whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+.kiwi ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;  
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.kiwi a{
+    display: block;
+    padding: 20px 0;
+    text-align: right;
+}
+.kiwi ul.show{
+    display:block;   
+}
+li a:hover{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.style:hover{
+    color: #101214;
+}
+/* Adaptation Nav bar */
+@media screen and
+(min-width: 700px){
+    header ul{
+    display: flex;
+    justify-content: flex-end;
+    }
+    .menus{
+        display: none;   
+    }
+    .kiwi ul{
+        display: flex;   
+    }
+    .kiwi a{
+        padding: 20px;
+    }
+}
+
+/* Appel a l'action et boutton*/
+.callact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+    width: 50%;
+    color: whitesmoke;
+    padding-right: 15%;
+
+}
+.butte{
+    background-color: rgba(0, 0, 0, 0);
+    color:whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+}
+/* LOGO */
+@keyframes tourbiLol{
+    0%{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    }
+}
+.laclé{
+    animation: 1s ease-out 0s 1 tourbiLol;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+    color: whitesmoke;
+}
