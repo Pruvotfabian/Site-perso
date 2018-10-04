@@ -102,6 +102,10 @@ li a:hover{
     border: 2px solid whitesmoke;
     border-radius: 10px 10px 10px 10px;
 }
+.butte:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #101214;
+}
 /* LOGO */
 @keyframes tourbiLol{
     0%{
@@ -113,7 +117,7 @@ li a:hover{
     }
 }
 .laclé{
-    animation: 1s ease-out 0s 1 tourbiLol;
+    animation: 0.8s ease-out 0s 1 tourbiLol;
 }
 .logo{
     display: flex;
@@ -122,5 +126,40 @@ li a:hover{
     flex-direction: column;
     float: left;
     width: 50%;
+    color: whitesmoke;
+}
+.Zone_res{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.resocial img{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding: 10px;
+}
+.resocial:hover img{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+@media screen and
+(max-width: 700px){
+    .logo{
+        float:none;
+        width:100%;
+    }
+    .laclé{
+        width: 80%;
+    }
+    .callact{
+        width:100%;
+        padding-left: 15%;
+    }
+}
+.clear{
+    clear: both;
+}
+footer{
+    text-align: center;
     color: whitesmoke;
 }
