@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 /* générale*/
 *{
     box-sizing: border-box;
 }
 body{
     background-color: #101214;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-variant: small-caps;
+    padding: 0;
     color: whitesmoke;
+    
+}
+p{
+    color: whitesmoke;
+    
 }
 h1{
     font-size: 2em;
@@ -29,61 +35,9 @@ p{
     width: 100%;
 }
 .pad{
-    padding-top: 4%;
+    padding-top: 7%;
     }
 /*  NAV BAR */
-.style {
-    transition: all 600ms ease-in-out;
-    -webkit-transition: all 600ms ease-in-out;
-    -moz-transition: all 600ms ease-in-out;
-    -o-transition: all 600ms ease-in-out; 
-    color: whitesmoke;
-    border-radius: 10px 10px 10px 10px;
-    text-decoration: none;
-}
-.kiwi ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;  
-}
-header{
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px;
-}
-.kiwi a{
-    display: block;
-    padding: 20px 0;
-    text-align: right;
-}
-.kiwi ul.show{
-    display:block;   
-}
-li a:hover{
-    background-color: whitesmoke;
-    padding: 20px;
-}
-.style:hover{
-    color: #101214;
-}
-/* Adaptation Nav bar */
-@media screen and
-(min-width: 700px){
-    header ul{
-    display: flex;
-    justify-content: flex-end;
-    }
-    .menus{
-        display: none;   
-    }
-    .kiwi ul{
-        display: flex;   
-    }
-    .kiwi a{
-        padding: 20px;
-    }
-}
 
 /* Appel a l'action et boutton*/
 .callact{
@@ -104,16 +58,13 @@ li a:hover{
     border-radius: 10px 10px 10px 10px;
 }
 .butte:hover {
+    transition: all 400ms ease-in-out;
     background-color: rgba(255, 255, 255, 1);
     color: #101214;
 }
 /* LOGO */
 @keyframes tourbiLol{
     0%{
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     }
 }
@@ -129,20 +80,6 @@ li a:hover{
     width: 50%;
     color: whitesmoke;
 }
-.Zone_res{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
-.resocial img{
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    padding: 10px;
-}
-.resocial:hover img{
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
 @media screen and
 (max-width: 700px){
     .logo{
@@ -157,7 +94,6 @@ li a:hover{
         padding-left: 15%;
     }
 }
-
 /* Portfolio carte et détail */
 .detail{
     text-align: justify;
@@ -166,7 +102,7 @@ li a:hover{
     padding-right: 5%;
 }
 .card{
-    position: absolute;
+    display: inline-flex;
     top:10%;
     left:10%;
     width:300px;
@@ -240,7 +176,7 @@ li a:hover{
     line-height: 36px;
 }
 .social-icons a:hover{
-    background: #e91e63;
+    background: #919191;
 }
 .card .back::before{
     content: '';
@@ -250,6 +186,144 @@ li a:hover{
     height: 100%;
     background: rgba(255, 255, 255, 0.2)
 }
+/* Portfolio mise en page */
+.flex{
+    display:flex;
+    float:left;
+    width: 40%;
+    justify-content: center;
+
+}
+.projet{ 
+display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.nav_projet{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+
+}
+.pcnprojet{
+    padding: 20px;
+    color: white;
+}
+@media screen and
+(max-width: 700px){ 
+    .detail{
+        width: 95%;
+    }
+    .flex{
+        width: 100%;
+    }
+}
+/* refonte nav bar jolie jolie */
+ul{
+    position: absolute;
+    left: 50%;
+    margin:0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    
+
+}
+ul li a{
+    display: block;
+    position: relative;
+    line-height: 50px;
+    width: 200px;
+    height: 50px;
+    margin:0 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s;
+}
+ul li a span{
+    position: absolute;
+    transition: transform .5s;
+}
+ul li a span:nth-child(1),
+ul li a span:nth-child(3)
+{
+    width: 100%;
+    height: 2px;
+    background: whitesmoke;
+}
+ul li a span:nth-child(1)
+{
+    top: 0;
+    left: 0;
+    transform-origin: right;
+
+}
+ul li a:hover span:nth-child(1){
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+ul li a span:nth-child(3)
+{
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+
+}
+ul li a:hover span:nth-child(3){
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4)
+{
+    width: 2px;
+    height: 100%;
+    background: whitesmoke;
+}
+ul li a span:nth-child(2)
+{
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+
+}
+ul li a:hover span:nth-child(2){
+    transform: scale(1);
+    transform-origin: top;
+    transition: transform .5s;
+}
+
+ul li a span:nth-child(4)
+{
+    top: 0;
+    right: 0;
+    transform: scale(0);
+    transform-origin: top;
+
+}
+ul li a:hover span:nth-child(4){
+    transform: scale(1);
+    transform-origin: bottom;
+    transition: transform .5s;
+}
+@media screen and
+(max-width: 700px){
+    ul{
+        display: none;
+    }
+}
+
+
+/* Projet */
 
 
 .clear{
