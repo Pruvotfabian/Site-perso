@@ -8,12 +8,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    color: whitesmoke;
-    
+    color: whitesmoke;  
 }
 p{
     color: whitesmoke;
-    
 }
 h1{
     font-size: 2em;
@@ -34,10 +32,6 @@ p{
     padding: 7%;
     width: 100%;
 }
-.pad{
-    padding-top: 7%;
-    }
-/*  NAV BAR */
 
 /* Appel a l'action et boutton*/
 .callact{
@@ -48,8 +42,7 @@ p{
     float: right;
     width: 50%;
     color: whitesmoke;
-    padding-right: 15%;
-
+    padding-right: 10%;
 }
 .butte{
     background-color: rgba(0, 0, 0, 0);
@@ -80,20 +73,7 @@ p{
     width: 50%;
     color: whitesmoke;
 }
-@media screen and
-(max-width: 700px){
-    .logo{
-        float:none;
-        width:100%;
-    }
-    .laclé{
-        width: 80%;
-    }
-    .callact{
-        width:100%;
-        padding-left: 15%;
-    }
-}
+
 /* Portfolio carte et détail */
 .detail{
     text-align: justify;
@@ -124,7 +104,6 @@ p{
 }
 .card .back{
     position:absolute;
-
     left:0;
     width: 100%;
     height: 100%;
@@ -192,10 +171,9 @@ p{
     float:left;
     width: 40%;
     justify-content: center;
-
 }
 .projet{ 
-display: flex;
+    display: flex;
     width: 100%;
     justify-content: center;
 }
@@ -204,33 +182,25 @@ display: flex;
     justify-content: center;
     padding: 0;
     list-style: none;
-
 }
 .pcnprojet{
     padding: 20px;
     color: white;
 }
-@media screen and
-(max-width: 700px){ 
-    .detail{
-        width: 95%;
-    }
-    .flex{
-        width: 100%;
-    }
-}
+
 /* refonte nav bar jolie jolie */
+.nav{
+    display: flex;
+    padding-right: 10%;
+    width: 100%;
+    height: 100px;
+    justify-content: flex-end;
+}
 ul{
-    position: absolute;
-    left: 50%;
-    margin:0;
-    padding: 0;
     display: flex;
 }
 ul li{
     list-style: none;
-    
-
 }
 ul li a{
     display: block;
@@ -260,7 +230,6 @@ ul li a span:nth-child(1)
     top: 0;
     left: 0;
     transform-origin: right;
-
 }
 ul li a:hover span:nth-child(1){
     transform: scaleX(0);
@@ -273,7 +242,6 @@ ul li a span:nth-child(3)
     bottom: 0;
     left: 0;
     transform-origin: left;
-
 }
 ul li a:hover span:nth-child(3){
     transform: scaleX(0);
@@ -294,7 +262,6 @@ ul li a span:nth-child(2)
     left: 0;
     transform: scale(0);
     transform-origin: bottom;
-
 }
 ul li a:hover span:nth-child(2){
     transform: scale(1);
@@ -308,24 +275,20 @@ ul li a span:nth-child(4)
     right: 0;
     transform: scale(0);
     transform-origin: top;
-
 }
 ul li a:hover span:nth-child(4){
     transform: scale(1);
     transform-origin: bottom;
     transition: transform .5s;
 }
-@media screen and
-(max-width: 700px){
-    ul{
-        display: none;
-    }
-}
+
 
 
 /* Projet */
 
-
+.espace{
+    width: 100%;
+}
 .clear{
     clear: both;
 }
@@ -334,3 +297,147 @@ footer{
     color: whitesmoke;
 }
 
+.projets{
+    width: 100%;
+    margin: 0;
+    float:none;
+    text-align: center;
+    margin-top: 5%;
+}
+.slider{
+    display: none;
+}
+.block_projet{
+    padding: 5%;
+}
+.center{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.no_slide{
+    display: initial;
+    height: 190px;
+
+}
+@media screen and
+(min-width: 980px){
+    .projets{
+        height: 235px;
+        border-right: 2px dotted whitesmoke;
+        width: 40%;
+        text-align: center;
+        margin-top: 5%;
+        float: left;
+        margin-left: 5%;
+    }
+    .projets_d{
+        height: 235px;
+        border-left: 2px dotted whitesmoke;
+        width: 40%;
+        text-align: center;
+        margin-top: 5%;
+        float: right;
+        margin-right: 5%;
+    }
+    .block_projet{
+        padding: 5%;
+    }
+    .block_img{
+        height: 235px;
+        float: right;
+        margin-right: 15%;
+    }
+    .no_slide{
+        display: none;
+    }
+    .slider{
+        display: block;
+    }
+    .slide{
+        display: initial;
+        float: left;
+    }
+    .slides{
+        width: calc(444px*6);
+        animation: glisse 20s infinite;
+    }
+    .slider{
+        width:444px;
+        overflow: hidden;
+    }
+    @keyframes glisse{
+        0%{
+            transform: translateX(0)
+        }
+        15%{
+            transform: translateX(0)
+        }
+        20%{
+            transform: translateX(-444px)
+        }
+        35%{
+            transform: translateX(-444px)
+        }
+        40%{
+            transform: translateX(-888px)
+        }
+        55%{
+            transform: translateX(-888px)
+        }
+        60%{
+            transform: translateX(-1332px)
+        }
+        75%{
+            transform: translateX(-1332px)
+        }
+        80%{
+            transform: translateX(-1776px)
+        }
+        95%{
+            transform: translateX(-1776px)
+        }
+        100%{
+            transform: translateX(0)
+        }
+        105%{
+            transform: translateX(0)
+        }
+}
+}
+@media screen and
+(max-width: 740px){
+    ul{
+        display: none;
+    }
+}
+@media screen and
+(max-width: 740px){ 
+    .detail{
+        width: 95%;
+    }
+    .flex{
+        width: 100%;
+    }
+}
+@media screen and
+(max-width:770px){
+    .flex{
+        height: 550px;
+        align-items: center;
+    }
+}
+@media screen and
+(max-width: 740px){
+    .logo{
+        float:none;
+        width:100%;
+    }
+    .laclé{
+        width: 80%;
+    }
+    .callact{
+        width:100%;
+        padding-left: 15%;
+    }
+}
