@@ -1,3 +1,13 @@
+/*
+
+ _____ _                  _         _             _ _     
+|_   _| |_  ___   __ __ _| |_____  (_)___  __ _  | (_)___ 
+  | | | ' \/ -_) / _/ _` | / / -_) | (_-< / _` | | | / -_)
+  |_| |_||_\___| \__\__,_|_\_\___| |_/__/ \__,_| |_|_\___|
+
+
+
+*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 /* générale*/
 *{
@@ -110,6 +120,7 @@ p{
     background: #000;
     transform:rotateX(180deg);
     transition: 0.5s;
+    backface-visibility: hidden;
 }
 .card:hover .front{
     transform:rotateX(-180deg);
@@ -172,11 +183,7 @@ p{
     width: 40%;
     justify-content: center;
 }
-.projet{ 
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+
 .nav_projet{
     display: flex;
     justify-content: center;
@@ -288,6 +295,7 @@ ul li a:hover span:nth-child(4){
 
 .espace{
     width: 100%;
+    height: 80px;
 }
 .clear{
     clear: both;
@@ -296,75 +304,66 @@ footer{
     text-align: center;
     color: whitesmoke;
 }
-
+.projet{ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .projets{
     width: 100%;
     margin: 0;
     float:none;
     text-align: center;
-    margin-top: 5%;
 }
-.slider{
-    display: none;
+.border_lower{
+    border: 2px solid whitesmoke;
+    width: 10%;
+    margin: 2%;
 }
-.block_projet{
-    padding: 5%;
+.border_Upper{
+    border: 2px solid whitesmoke;
+    width: 20%;
+}
+.block_projet_d{
+    text-align: center;
 }
 .center{
-    padding-top: 5%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-left: 5%;
 }
-.no_slide{
-    display: initial;
-    height: 190px;
+.sep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
+}
+.center_g{
+    display: flex;
+    justify-content: flex-end;
 }
 @media screen and
 (min-width: 980px){
     .projets{
-        height: 235px;
-        border-right: 2px dotted whitesmoke;
-        width: 40%;
+        display: flex;
+        justify-content: center;
         text-align: center;
-        margin-top: 5%;
-        float: left;
-        margin-left: 5%;
+
     }
-    .projets_d{
-        height: 235px;
-        border-left: 2px dotted whitesmoke;
-        width: 40%;
-        text-align: center;
-        margin-top: 5%;
-        float: right;
-        margin-right: 5%;
+    .text{
+        padding: 5%;
+        margin: 0
     }
     .block_projet{
-        padding: 5%;
+        width: 40%;
+        border-right: 3px dotted whitesmoke;
     }
-    .block_img{
+    }.block_img{
         height: 235px;
         float: right;
         margin-right: 15%;
-    }
-    .no_slide{
-        display: none;
-    }
-    .slider{
-        display: block;
-    }
-    .slide{
-        display: initial;
-        float: left;
-    }
-    .slides{
-        width: calc(444px*6);
-        animation: glisse 20s infinite;
-    }
-    .slider{
-        width:444px;
-        overflow: hidden;
     }
     @keyframes glisse{
         0%{
@@ -404,7 +403,7 @@ footer{
             transform: translateX(0)
         }
 }
-}
+
 @media screen and
 (max-width: 740px){
     ul{
