@@ -182,6 +182,7 @@ p{
     float:left;
     width: 40%;
     justify-content: center;
+    align-items: center;
 }
 
 .nav_projet{
@@ -232,12 +233,14 @@ ul li a span:nth-child(3)
     height: 2px;
     background: whitesmoke;
 }
+
 ul li a span:nth-child(1)
 {
     top: 0;
     left: 0;
     transform-origin: right;
 }
+
 ul li a:hover span:nth-child(1){
     transform: scaleX(0);
     transform-origin: left;
@@ -331,7 +334,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    width: 40%;
+    border: 3px dashed whitesmoke;
+}
+
+.imgs{
+    width: 90%;
+    margin: 3%;
 }
 .sep{
     display: flex;
@@ -340,12 +349,41 @@ footer{
     flex-direction: column;
 
 }
+.circle{
+    display: block;
+    background: whitesmoke;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .center_g{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border: 3px dashed whitesmoke;
 }
+.anibord{
+    border: 1.5px dashed whitesmoke;
+    width: 100%;
+}
+.titre{
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+}
+
+
 @media screen and
-(min-width: 980px){
+(min-width: 740px){
     .projets{
         display: flex;
         justify-content: center;
@@ -358,50 +396,16 @@ footer{
     }
     .block_projet{
         width: 40%;
-        border-right: 3px dotted whitesmoke;
+        display: flex;
+        flex-direction: column;
     }
-    }.block_img{
-        height: 235px;
-        float: right;
-        margin-right: 15%;
+    .block_projet_g{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-    @keyframes glisse{
-        0%{
-            transform: translateX(0)
-        }
-        15%{
-            transform: translateX(0)
-        }
-        20%{
-            transform: translateX(-444px)
-        }
-        35%{
-            transform: translateX(-444px)
-        }
-        40%{
-            transform: translateX(-888px)
-        }
-        55%{
-            transform: translateX(-888px)
-        }
-        60%{
-            transform: translateX(-1332px)
-        }
-        75%{
-            transform: translateX(-1332px)
-        }
-        80%{
-            transform: translateX(-1776px)
-        }
-        95%{
-            transform: translateX(-1776px)
-        }
-        100%{
-            transform: translateX(0)
-        }
-        105%{
-            transform: translateX(0)
-        }
 }
 
 @media screen and
@@ -417,13 +421,6 @@ footer{
     }
     .flex{
         width: 100%;
-    }
-}
-@media screen and
-(max-width:770px){
-    .flex{
-        height: 550px;
-        align-items: center;
     }
 }
 @media screen and
