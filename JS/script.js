@@ -30,63 +30,45 @@ function click() {
   circle.removeEventListener('click', click);
 }
 
-window.onload = function() {
-  //getting all anchor elements
-  var links = document.links;
-
-  //getting html
-  html = document.documentElement;
-
-  //getting body
-  body = document.body;
-
-  for (var i = 0; i < links.length; i++) {
-    links[i].onclick = function() {
-      //getting current scroll position
-      var scrollTop = Math.round(body.scrollTop || html.scrollTop);
-      if (this.hash !== "") {
-        //preventing default anchor click behavior
-        event.preventDefault();
-
-        //getting element with id found in hash
-        var hashElement = document.getElementById(this.hash.substring(1));
-
-        var hashElementTop = 0;
-        var obj = hashElement;
-        while (obj.offsetParent) {
-          hashElementTop += obj.offsetTop;
-          obj = obj.offsetParent;
-        }
-        //getting element's position
-        hashElementTop = Math.round(hashElementTop);
-
-        scroll(scrollTop, hashElementTop, this.hash);
-      }
-    };
-  }
-};
-function scroll(from, to, hash) {
-  var timeInterval = 1; //in ms
-  var prevScrollTop;
-  var increment = to > from ? 8 : -8;
-    
-  var scrollByPixel = setInterval(function() {
-    //getting current scroll position
-    var scrollTop = Math.round(body.scrollTop || html.scrollTop);
-    if (
-      prevScrollTop == scrollTop ||
-      (to > from && scrollTop >= to) ||
-      (to < from && scrollTop <= to)
-    ) {
-      clearInterval(scrollByPixel);
-      //Add hash to the url after scrolling
-      window.location.hash = hash;
-    } else {
-      body.scrollTop += increment;
-      html.scrollTop += increment;
-      prevScrollTop = scrollTop;
-    }
-  }, timeInterval);
+var truc = document.getElementById("truc");
+truc.addEventListener('click', click2)
+function click2() {
+   window.location = "https://github.com/Pruvotfabian/JS-JEU-BETA-test";
   
+}
 
+
+
+var circleb = document.getElementById("circleb");
+circleb.addEventListener('click', clickb)
+function clickb() {
+  document.getElementById('test2b').style.display = "block";
+  window.setTimeout(c, 300)
+  function c() {
+    document.getElementById('testb').style.display = "block";
+    function extraire() {
+      character = message.substring(I, I=I+1) ;
+      if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {              
+           character = "<br>" ;
+           I = I + 5;
+           }
+      testb.innerHTML += character;
+      if ( I < message.length ) setTimeout(extraire, 100);
+      }
+ I = 0 ;
+ message = "-stop- Projet Site de la Muerte-stop- ";
+ extraire();
+  }
+  window.setTimeout(d, 2000)
+  function d() {
+    document.getElementById('test3b').style.display = "block";
+  }
+  circle.removeEventListener('click', clickb);
+}
+
+var trucb = document.getElementById("trucb");
+trucb.addEventListener('click', click3)
+function click3() {
+   window.location = "https://github.com/Pruvotfabian/Site-de-la-Muerte";
+  
 }
