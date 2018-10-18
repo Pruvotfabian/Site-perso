@@ -18,6 +18,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    
     color: whitesmoke;  
 }
 p{
@@ -28,9 +29,7 @@ h1{
     margin:5px;
     font-variant: small-caps;
 }
-h4{
-    color: #a7a7a7;
-}
+
 p{
     font-size:1.1em;
 }
@@ -161,17 +160,6 @@ p{
     align-items: center;
 }
 
-.nav_projet{
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-}
-.pcnprojet{
-    padding: 20px;
-    color: white;
-}
-
 
 
 
@@ -194,7 +182,11 @@ footer{
     width: 100%;
     justify-content: center;
 }
+
 .projets{
+    display: flex;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     margin: 0;
     float:none;
@@ -219,9 +211,9 @@ footer{
     display: none;
 }
 .width{
-    width: 40%;
     height: 241px;
 }
+
 .block_projet h1{
     display: none;
 }
@@ -232,6 +224,8 @@ footer{
     margin: 5%;
 }
 .wrapper{
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
 }
@@ -353,7 +347,7 @@ footer{
 .block_1{
     width: 100%;
     height: 500px;
-    background-color: #f5f5f5;
+    background-color: whitesmoke;
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
@@ -375,7 +369,6 @@ footer{
     padding-left: 60%;
 }
 .fond{
-    display: none;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -393,6 +386,16 @@ footer{
     background-color: transparent;
     border: 3px dashed transparent;
     animation: button 1s linear forwards;
+}
+.millieu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-envelope-o, .fa-mobile{
+    margin-right: 20px
 }
 @keyframes button{
     0%{
@@ -431,6 +434,12 @@ footer{
     background-color: transparent;
     border: 3px dashed transparent;
     animation: button2 1s linear forwards;
+}
+.effect .colabo{
+    color:  #222;
+    font-size: 1.5em;
+    font-weight: bold;
+
 }
 @keyframes button2{
     0%{
@@ -520,39 +529,38 @@ footer{
 
 
 @media screen and
-(min-width: 740px){
-    .projets{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-
+(max-width: 414px){ 
+    .block_2{
+        flex-direction: column;
+        align-items: center;
     }
-    .text{
-        padding: 5%;
-        margin: 0
-    }
-    .projet_block{
-        width: 100%
-    }
-    .block_projet{
-        width: 40%;
+    .block_1{
         display: flex;
         flex-direction: column;
+        height: auto;
+        padding-top: 5%;
+        clip-path: none;
+        -webkit-clip-path:none;
     }
-}
-
-@media screen and
-(max-width: 740px){
-    ul{
-        display: none;
-    }
-}
-@media screen and
-(max-width: 740px){ 
     .detail{
-        width: 95%;
-    }
-    .flex{
+        float: none;
         width: 100%;
+        padding-right: 5%;
     }
+    .laclé{
+        height: 300px;
+    }
+    .espace{
+        height: 30px;;
+    }
+    .border_lower{
+        width: 40%;
+    }
+    .border_Upper{
+        width: 80%;
+    }
+    i{
+        height: 200px;
+    }
+    
 }
