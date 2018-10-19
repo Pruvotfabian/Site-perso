@@ -13,6 +13,9 @@
 *{
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #101214;
     font-family: 'Montserrat', sans-serif;
@@ -51,6 +54,7 @@ p{
     animation: tourbilol 0.8s ease-out 0s 1 ;
 }
 .logo{
+    padding-top: 4%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +70,28 @@ p{
     padding-right: 15%;
     padding-left: 5%;
 }
+.button{
+    border: 0;
+    height: 50px;
+    widows: 80px;
+    color: whitesmoke;
+    background-color: #101214;
+    cursor: pointer;
+}
+.button a{
+    color: whitesmoke;
+    font-size: 1em;
+    text-decoration: none;
+}
+.button:hover {
+    border: 2px dashed #101214;
+    background-color: whitesmoke;
+    transition: 0.5s ease-out ;
+}
+.button:hover a {
+    color: #101214;
+    transition: 0.5s linear;
+}
 .card{
     display: inline-flex;
     top:10%;
@@ -76,6 +102,7 @@ p{
     perspective: 600px;
     transition: 0.5s;
 }
+
 .card .front{
     position:absolute;
     top:0;
@@ -174,8 +201,11 @@ p{
     clear: both;
 }
 footer{
+    padding: 2%;
     text-align: center;
-    color: whitesmoke;
+}
+footer p{
+    margin: 0;
 }
 .projet{ 
     display: flex;
@@ -368,13 +398,6 @@ footer{
 .JS{
     padding-left: 60%;
 }
-.fond{
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
 
 .truc:before{
     content: '';
@@ -397,6 +420,110 @@ footer{
 .fa-envelope-o, .fa-mobile{
     margin-right: 20px
 }
+
+.fond2{
+    height: auto;
+    color: #101214;
+    width: 100%;
+    background-color: whitesmoke;
+    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+.fond2 .fa {
+    color: #101214;
+}
+.fond{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../images/fond.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 40px;
+    height: 40px;
+    background-color: #919191;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    z-index: 10;
+    border: 1px solid #fff;
+    padding: 0 20px;
+}
+.toggle:before{
+    content: 'Menu';
+    color: #fff;
+    line-height: 40px;
+}
+.toggle.active:before{
+    content: 'Close';
+    color: #fff;
+    line-height: 40px;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #101214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.sidebar.active{
+    left: 0;
+}
+ul{
+position: relative;
+}
+ul li{
+    list-style: none;
+    text-align: center;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+ul li a:hover{
+    color: #fff;
+}
+ul li a:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    font-size: 3em;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    font-family: initial;
+}
+ul li a:hover:before{
+
+    opacity: 0.1;
+    top: 50%;
+}
+
 @keyframes button{
     0%{
         width: 0;
@@ -561,6 +688,16 @@ footer{
     }
     i{
         height: 200px;
+    }
+    .button{
+        margin: 5%;
+    }
+    .fond2 .millieu{
+        height: 300px;
+    }
+    .fond2 h2{
+        font-size: 1.3em;
+        height: 20px;
     }
     
 }
