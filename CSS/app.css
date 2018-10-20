@@ -21,7 +21,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    
     color: whitesmoke;  
 }
 p{
@@ -59,7 +58,6 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: whitesmoke;
 }
 
 /* Portfolio carte et détail */
@@ -657,23 +655,7 @@ ul li a:hover:before{
 
 @media screen and
 (max-width: 414px){ 
-    .block_2{
-        flex-direction: column;
-        align-items: center;
-    }
-    .block_1{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        padding-top: 5%;
-        clip-path: none;
-        -webkit-clip-path:none;
-    }
-    .detail{
-        float: none;
-        width: 100%;
-        padding-right: 5%;
-    }
+
     .laclé{
         height: 300px;
     }
@@ -689,9 +671,6 @@ ul li a:hover:before{
     i{
         height: 200px;
     }
-    .button{
-        margin: 5%;
-    }
     .fond2 .millieu{
         height: 300px;
     }
@@ -699,5 +678,65 @@ ul li a:hover:before{
         font-size: 1.3em;
         height: 20px;
     }
-    
+    .block_projet{
+        display: none;
+    }
+    .center{
+        display: flex;
+    }
+    .truc{
+        width: 95%;
+    }
+    .sidebar{
+        justify-content: flex-start;
+    }
+    ul li a:before{
+        display: none;
+    }
+}
+@media screen and
+(max-width: 800px){ 
+    .block_1{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-top: 5%;
+        clip-path: none;
+        -webkit-clip-path:none;
+    }
+    ul li a:before{
+        display: none;
+    }
+    .button{
+        margin: 5%;
+    }
+    .detail{
+        float: none;
+        width: 100%;
+        padding-right: 5%;
+    }
+}
+@media screen and
+(max-width: 900px){ 
+    .block_projet{
+        display: none;
+    }
+    .center{
+        display: flex;
+    }
+    .truc{
+        width: 95%;
+    }
+    .sidebar{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and
+(max-width: 600px){ 
+    .block_2{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

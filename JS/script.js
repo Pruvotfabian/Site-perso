@@ -153,8 +153,6 @@ function clicka() {
   
 }
 
-
-
 var circlez = document.getElementById("circle2");
 circlez.addEventListener('click', click5)
 function click5() {
