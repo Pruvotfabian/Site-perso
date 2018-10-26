@@ -1,11 +1,8 @@
 /*
-
  _____ _                  _         _             _ _     
 |_   _| |_  ___   __ __ _| |_____  (_)___  __ _  | (_)___ 
   | | | ' \/ -_) / _/ _` | / / -_) | (_-< / _` | | | / -_)
   |_| |_||_\___| \__\__,_|_\_\___| |_/__/ \__,_| |_|_\___|
-
-
 
 */
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -521,6 +518,13 @@ ul li a:hover:before{
     opacity: 0.1;
     top: 50%;
 }
+
+
+
+
+
+
+
 
 @keyframes button{
     0%{

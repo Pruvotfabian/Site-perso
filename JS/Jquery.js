@@ -6,7 +6,6 @@ $(document).ready(function(){
     
   })
 })
-
 $(document).ready(function(){
     $('.a').click(function(){
       $('.toggle').removeClass('active')
