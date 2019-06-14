@@ -10,6 +10,7 @@
 *{
     box-sizing: border-box;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -19,6 +20,41 @@ body{
     margin: 0;
     padding: 0;
     color: whitesmoke;  
+}
+
+.ohi{
+    padding-top:20px; 
+    height: auto;
+    width: 100%;
+}
+.ohtxt{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ohimg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and
+(max-width: 900px){ 
+    .ohimg{
+        height: 250px;
+    }
+    .imgoh{
+        height: 150px;
+    }
+    .ohtxt{
+        float: none;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 }
 p{
     color: whitesmoke;
@@ -380,7 +416,7 @@ footer p{
     color: #101214;
 }
 .block_2{
-    font-size: 200px;
+    font-size: 130px;
     display: flex;
     justify-content: space-around;
 }
@@ -393,7 +429,25 @@ footer p{
 .JS{
     padding-left: 60%;
 }
-
+#fa-github 
+   {
+    font-size: 130px;
+}
+#fa-linux 
+{
+    font-size: 130px;
+}
+#fa-css3 
+{
+    font-size: 130px;
+}
+#fa-html5
+{
+    font-size: 130px;
+}
+.img{
+    height: 130px;
+}
 .truc:before{
     content: '';
     position: absolute;
@@ -425,6 +479,7 @@ footer p{
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 }
 .fond2 .fa {
+
     color: #101214;
 }
 .fond{
@@ -743,4 +798,9 @@ ul li a:hover:before{
         align-items: center;
     }
 
+}
+.n{
+    font-weight: bold;
+    text-decoration: none;
+    color: #101214
 }
